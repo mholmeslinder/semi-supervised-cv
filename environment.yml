@@ -1,0 +1,22 @@
+name: tf2
+channels:
+  - defaults
+dependencies:  
+  - scikit-learn=0.23.2=py37h959d312_0
+  - pip:
+    - keras-preprocessing==1.1.2
+    - matplotlib==3.3.3
+    - numpy==1.18.5
+    - opencv-python==4.4.0.46
+    - pandas==1.1.4
+    - scipy==1.5.4
+    - tensorboard==2.4.0
+    - tensorboard-plugin-wit==1.7.0
+    - tensorflow==2.3.1
+    - tensorflow-addons==0.11.2
+    - tensorflow-datasets==4.1.0
+    - tensorflow-estimator==2.3.0
+    - tensorflow-hub==0.10.0
+    - tensorflow-metadata==0.25.0
+    - tensorflow-model-optimization==0.5.0
+    - tqdm==4.51.0

@@ -109,8 +109,8 @@ I passed both my labeled and unlabeled Xs through this `dense` model, then passe
 Then, I retrained my model on this new dataset, to see if the additional data improved performance.
 
 # Performance
+(see notebook)
 
-https://www.notion.so/mobiusmatt/Results-833edd3f50b04312acae589f25b01465#dcc17e939d314bfa862804a2c04c5fa3
 
 Overall, performance was okay. I was very surprised at how much the default hyperparameters tended to outperform everything I tried to tweak. 
 
