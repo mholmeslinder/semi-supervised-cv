@@ -4,9 +4,13 @@ This workbook is is designed for automated pathology detection for Medical Image
 
 The goal is to design models and methods to predictively detect pathological images and explain the pathology sites in the image data.
 
+# Environment/Requirements
+This repo contains an `environment.yml` file that you can use with your package manager of choice to reproduce the environment/download the necessary packages.
+
+# Data
 ### Data for this assignment is taken from a Kaggle contest: https://www.kaggle.com/c/vietai-advance-course-retinal-disease-detection/overview
 
-Explanation of the data set: The training data set contains 3435 retinal images that represent multiple pathological disorders. The patholgy classes and corresponding labels are: included in 'train.csv' file and each image can have more than one class category (multiple pathologies). The labels for each image are:
+The training data set contains 3435 retinal images that represent multiple pathological disorders. The patholgy classes and corresponding labels are: included in 'train.csv' file and each image can have more than one class category (multiple pathologies). The labels for each image are:
 
 ```
 -opacity (0), 
@@ -117,3 +121,18 @@ Overall, performance was okay. I was very surprised at how much the default hype
 As I mentioned above, if I started this again - I'd probably try a "one-vs-Normal" approach. AlexNet would still be a good choice, since it's lightweight - building 3 separate ResNet100s or whatever seems like it would be impractical for many purposes.
 
 The most exciting thing about performance is how much it was boosted by the data augmentation - both in terms of fine-tuning the original model AND retraining from scratch on the augmented data. This technique seems like it could be very helpful for many real-world applications, since labeled data is always at a premium relative to unlabeled data.# AlexNet_cv
+
+# This Repo
+Everything necessary to reproduce this work is contained in the notebook *ML_for ComputerVisionvFINAL.ipynb*. The other directories contain contextual and explanatory material, showing the development process for the final notebook.
+
+### archive:
+contains previous versions of this work in various states of completion, mostly showing the dead ends common to developing and iterating on these types of models.
+
+### logs:
+contains Tensorboard scalars showing the training history of the various versions of the model in numerical order (1 being the earliest models, 10 the latest).
+
+### models:
+contains model weights for the various versions of the model that were tested. It contains weights as opposed to saved models because we used a custom AlextNet class, and the tf/Keras `save_model()` method doesn't work for that type of custom class.
+
+### results:
+contains heatmap images for many of the training images showing our different pathologies - Diabetic Retinopathy and Glaucoma - vs Normal images.
